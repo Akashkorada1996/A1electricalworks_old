@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm(){
+	const userID=document.getElementById('userID').value;
+	const password= document.getElementById('password').value;
+	
+	if(userID== ""){
+		alert("enter userID");
+		return false;
+	}
+	if(password== ""){
+		alert("enter password");
+		return false;
+	}
+}
+
+
+
+
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form onsubmit="return validateForm()" action="validate.jsp" method="post">
+userID<input type="text" name="userID" id="userID"><br>
+password<input type="password" name="password" id="password"><br>
+
+<button type="submit" >login</button>
+  
+</form>
+<form>
+<button type="submit" formaction="registration.html">register</button>
+</form>
+
+</body>
+</html>

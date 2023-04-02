@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function validateForm(){
+
+const password= document.getElementById('password').value;
+const confirm_password= document.getElementById('confirm_password').value;
+const name=document.getElementById('name').value;
+const userID=document.getElementById('userID').value;
+const email=document.getElementById('email').value;
+
+	if(name == ""){
+		alert("enter name");
+		return false;
+	}
+	if(userID == ""){
+		alert("enter userID");
+		return false;
+	}
+	if(email == ""){
+		alert("enter email");
+		return false;
+	}
+	if(password == ""){
+		alert("enter password");
+		return false;
+	}
+	if(confirm_password == ""){
+		alert("enter confirm password");
+		return false;
+	}
+	if(password!=confirm_password){
+		alert("password not match");
+		return false;
+	}
+
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form onsubmit ="return validateForm()" action="indexAction.jsp" method="post">
+name<input type="text" name="name" id="name"><br>
+userID<input type="text" name="userID" id="userID"><br>
+email<input type="email" name="email" id="email"><br>
+password<input type="password" name="password" id="password"><br>
+confirm password<input type="password" name="confirm_password" id="confirm_password">
+
+<button type="submit" >register now</button>
+
+
+</form>
+</body>
+</html>
